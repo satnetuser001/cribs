@@ -29,4 +29,30 @@ class ReturnSelf
 //$obj = ReturnSelf::one()::two()::three()::one();
 ReturnSelf::one()->two()->three()->one();
 
+
+class Returnable
+{
+	public $var = 'default';
+
+	public function say(){
+		echo $this->var . "\n";
+		return $this;
+	}
+
+	public function one(){
+		$this->var = 'one';
+		return $this;
+	}
+
+	public function two(){
+		$this->var = 'two';
+		return $this;
+	}
+}
+
+$obj = (new Returnable())->say()->one()->say()->two()->say();
+/*
+$obj = new Returnable();
+$obj->say()->one()->say()->two()->say();
+*/
 ?>
