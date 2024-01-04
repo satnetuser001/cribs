@@ -1,0 +1,3 @@
+Пример обращения к классу "vendor\laravel\illuminate\Hello" псевдонимом "use Illuminate\Hello" через пространство имен "namespace Illuminate" и файлом автозагрузки include.php.
+НАВЕРНОЕ, что-то похожее реализуется в Laravel, когда в Контроллере указываем псевдоним "use Illuminate\Http\Request".
+Пока не понятно где в Laravel реализованна автозагрузка файлов: в Composer (например vendor\composer\autoload_namespaces.php) или в самом приложении.
